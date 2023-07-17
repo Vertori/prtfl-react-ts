@@ -1,7 +1,7 @@
 // import pages
 import Home from "../pages/Home";
 import About from "../pages/About";
-import Portfolio from "../pages/Portfolio";
+import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
 
 import { Routes, Route, useLocation } from "react-router-dom";
@@ -11,7 +11,7 @@ const AnimRoutes = (): JSX.Element => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/projects" element={<Projects />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
   );
