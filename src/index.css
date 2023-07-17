@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-primary font-secondary bg-[#FCFCFC] overflow-x-hidden;
+  }
+  .h1 {
+    @apply text-[54px] lg:text-[108px] font-primary font-bold capitalize leading-[120%] tracking-[-0.05em] mb-2;
+  }
+  .section {
+    @apply min-h-screen w-screen;
+  }
+  .btn {
+    @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white border border-black hover:bg-white hover:text-primary transition duration-300;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  background-color: black !important;
+  border-radius: 50% !important;
+  opacity: 1 !important;
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+  z-index: 20 !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+}
+
+.Toastify__toast-container {
+  top: 8rem;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(114, 113, 113);
+  border-radius: 10px;
+  height: 200px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
