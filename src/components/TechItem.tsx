@@ -4,7 +4,7 @@ type Props = {
   item: TechItemType;
 };
 
-const TechItem = ({ item }: Props) => {
+const TechItem = ({ item }: Props): JSX.Element => {
   const { name, image } = item;
   return (
     <div className="flex flex-col justify-center items-center h-full gap-y-2">
