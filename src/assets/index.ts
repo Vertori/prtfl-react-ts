@@ -96,14 +96,15 @@ const projectsList = [
     images: [netflix1, netflix2, netflix3],
     tags: [
       "React",
+      "Typescript",
       "Tailwind CSS",
       "API (Axios)",
       "Firebase",
       "React Router",
       "Swiper",
     ],
-    liveLink: "https://netflix-clone-react-rf.netlify.app/",
-    codeLink: "https://github.com/Vertori/ntflx-cln-react",
+    liveLink: "https://netflix-clone-react-ts-rf.netlify.app/",
+    codeLink: "https://github.com/Vertori/ntflx-cln-react-ts",
   },
   {
     id: 2,
@@ -111,9 +112,16 @@ const projectsList = [
     description:
       "Online store website created by fetching data from Fake Store API, fully styled using Tailwind CSS. The website allows you to add items to the cart and fully manipulate cart content. The shopping cart dynamically updates the number of items in it and their total value. Each product has its own dynamically generated page.",
     images: [ecommerce1, ecommerce2, ecommerce3],
-    tags: ["React", "Tailwind CSS", "API (Axios)", "React Router", "Swiper"],
-    liveLink: "https://ecmrc-react-rf.netlify.app/",
-    codeLink: "https://github.com/Vertori/e-cmrc-react",
+    tags: [
+      "React",
+      "Typescript",
+      "Tailwind CSS",
+      "API (Axios)",
+      "React Router",
+      "Swiper",
+    ],
+    liveLink: "https://ecmrc-react-ts-rf.netlify.app/",
+    codeLink: "https://github.com/Vertori/e-cmrc-react-typescript",
   },
   {
     id: 3,
@@ -123,13 +131,14 @@ const projectsList = [
     images: [yt1, yt3],
     tags: [
       "React",
+      "Typescript",
       "Tailwind CSS",
       "API (Axios)",
       "React Router",
       "React Player",
     ],
-    liveLink: "https://yt-clone-react-rf.netlify.app/",
-    codeLink: "https://github.com/Vertori/yt-cln-react",
+    liveLink: "https://yt-clone-react-ts-rf.netlify.app/",
+    codeLink: "https://github.com/Vertori/yt-cln-react-ts",
   },
   {
     id: 4,
@@ -139,12 +148,13 @@ const projectsList = [
     images: [tesla1, tesla2],
     tags: [
       "React",
+      "Typescript",
       "Styled Components",
       "React Router",
       "React Awesome Reveal",
     ],
-    liveLink: "https://tesla-clone-react-rf.netlify.app/",
-    codeLink: "https://github.com/Vertori/tsl-cln-react",
+    liveLink: "https://tesla-clone-react-ts-rf.netlify.app/",
+    codeLink: "https://github.com/Vertori/tsl-cln-react-typescript",
   },
 ];
 
