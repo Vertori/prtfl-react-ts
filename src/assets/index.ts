@@ -39,36 +39,41 @@ const techList = [
   },
   {
     id: 4,
+    name: "TypeScript",
+    image: typescriptLogo,
+  },
+  {
+    id: 5,
     name: "React JS",
     image: reactLogo,
   },
   {
-    id: 5,
+    id: 6,
     name: "Tailwind CSS",
     image: tailwindLogo,
   },
   {
-    id: 6,
+    id: 7,
     name: "Styled Components",
     image: styledcomponentsLogo,
   },
   {
-    id: 7,
+    id: 8,
     name: "Firebase",
     image: firebaseLogo,
   },
   {
-    id: 8,
+    id: 9,
     name: "Framer Motion",
     image: framermotionLogo,
   },
   {
-    id: 9,
+    id: 10,
     name: "Git",
     image: gitLogo,
   },
   {
-    id: 10,
+    id: 11,
     name: "GitHub",
     image: githubLogo,
   },
@@ -77,11 +82,6 @@ const techList = [
 const currentlyLearning = [
   {
     id: 1,
-    name: "Typescript",
-    image: typescriptLogo,
-  },
-  {
-    id: 2,
     name: "Redux",
     image: reduxLogo,
   },
