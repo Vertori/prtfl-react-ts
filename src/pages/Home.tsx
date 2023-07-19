@@ -20,7 +20,7 @@ const Home = (): JSX.Element => {
           </Link>
         </div>
         {/* img */}
-        <div className="max-w-[200px] md:max-w-full">
+        <div className="max-w-[140px] sm:max-w-[180px] lg:max-w-full">
           <img className="rounded-full shadow-2xl" src={avatar} alt="avatar" />
         </div>
       </div>

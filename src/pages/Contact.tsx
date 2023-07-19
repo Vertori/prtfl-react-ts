@@ -60,7 +60,7 @@ const Contact = (): JSX.Element => {
   return (
     <section className="section bg-[#FCFCFC]">
       <ToastContainer />
-      <div className="container mx-auto min-h-full pt-52 px-4 pb-28">
+      <div className="container mx-auto min-h-full pt-40 px-4 pb-28">
         {/* Page title */}
         <div className="text-center">
           <h1 className="h1">Contact</h1>
