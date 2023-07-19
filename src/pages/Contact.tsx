@@ -4,6 +4,8 @@ import { MdLocationOn } from "react-icons/md";
 import { FiMail } from "react-icons/fi";
 import { BsTelephoneFill } from "react-icons/bs";
 import { ContactFormValues } from "../types";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = (): JSX.Element => {
   const [formValues, setFormValues] = useState<ContactFormValues>({
@@ -16,6 +18,7 @@ const Contact = (): JSX.Element => {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const emailNoti = toast.loading("Please wait...");
 
     if (form.current) {
       emailjs
@@ -28,9 +31,21 @@ const Contact = (): JSX.Element => {
         .then(
           (result) => {
             console.log(result.text);
+            toast.update(emailNoti, {
+              render: "E-mail sent, thanks! 🥰",
+              type: "success",
+              isLoading: false,
+              autoClose: 4000,
+            });
           },
           (error) => {
             console.log(error.text);
+            toast.update(emailNoti, {
+              render: "Something went wrong! 😥",
+              type: "error",
+              isLoading: false,
+              autoClose: 4000,
+            });
           }
         );
     }
@@ -44,6 +59,7 @@ const Contact = (): JSX.Element => {
 
   return (
     <section className="section bg-[#FCFCFC]">
+      <ToastContainer />
       <div className="container mx-auto min-h-full pt-52 px-4 pb-28">
         {/* Page title */}
         <div className="text-center">
