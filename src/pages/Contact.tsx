@@ -1,8 +1,47 @@
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { MdLocationOn } from "react-icons/md";
 import { FiMail } from "react-icons/fi";
 import { BsTelephoneFill } from "react-icons/bs";
+import { ContactFormValues } from "../types";
 
 const Contact = (): JSX.Element => {
+  const [formValues, setFormValues] = useState<ContactFormValues>({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (form.current) {
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_YOUR_SERVICE_ID,
+          import.meta.env.VITE_YOUR_TEMPLATE_ID,
+          form.current,
+          import.meta.env.VITE_YOUR_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
+
+    setFormValues({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
   return (
     <section className="section bg-[#FCFCFC]">
       <div className="container mx-auto min-h-full pt-52 px-4 pb-28">
@@ -42,7 +81,11 @@ const Contact = (): JSX.Element => {
         </div>
         {/* Form */}
         <div className="w-full bg-white border shadow-xl p-12  xl:p-4 relative">
-          <form className="flex flex-col gap-8 mt-8">
+          <form
+            className="flex flex-col gap-8 mt-8"
+            ref={form}
+            onSubmit={sendEmail}
+          >
             <div className="flex flex-col gap-y-2">
               <label htmlFor="name" className="font-primary text-lg font-bold">
                 Your Name
@@ -50,7 +93,13 @@ const Contact = (): JSX.Element => {
               <input
                 type="text"
                 id="name"
+                name="name"
                 placeholder="Name"
+                value={formValues.name}
+                onChange={(e) =>
+                  setFormValues({ ...formValues, name: e.target.value })
+                }
+                required
                 className="bg-gray-100 py-4 px-6  text-primary rounded-lg outline-none border-none font-medium"
               />
             </div>
@@ -60,9 +109,13 @@ const Contact = (): JSX.Element => {
               </label>
               <input
                 type="email"
-                name=""
+                name="email"
                 id="email"
                 placeholder="E-mail"
+                value={formValues.email}
+                onChange={(e) =>
+                  setFormValues({ ...formValues, email: e.target.value })
+                }
                 className="bg-gray-100 py-4 px-6  text-primary rounded-lg outline-none border-none font-medium"
               />
             </div>
@@ -75,13 +128,20 @@ const Contact = (): JSX.Element => {
               </label>
               <textarea
                 id="message"
+                name="message"
                 cols={30}
                 rows={10}
                 placeholder="Message"
+                value={formValues.message}
+                onChange={(e) =>
+                  setFormValues({ ...formValues, message: e.target.value })
+                }
                 className="bg-gray-100 py-4 px-6  text-primary rounded-lg outline-none border-none font-medium"
               ></textarea>
             </div>
-            <button className="btn">Send</button>
+            <button className="btn" type="submit">
+              Send
+            </button>
           </form>
         </div>
       </div>

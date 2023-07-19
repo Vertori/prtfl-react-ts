@@ -13,3 +13,9 @@ export type ProjectType = {
   liveLink: string;
   codeLink: string;
 };
+
+export type ContactFormValues = {
+  name: string;
+  email: string;
+  message: string;
+};
