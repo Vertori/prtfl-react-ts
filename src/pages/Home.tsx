@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import avatar from "../assets/avatar1.webp";
 import Socials from "../components/Socials";
-import { motion } from "framer-motion";
-import { transition1 } from "../transitions";
 
 const Home = (): JSX.Element => {
   return (

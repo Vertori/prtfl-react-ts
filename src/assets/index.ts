@@ -20,6 +20,8 @@ import yt1 from "./websites/yt1.webp";
 import yt3 from "./websites/yt3.webp";
 import tesla1 from "./websites/tesla1.webp";
 import tesla2 from "./websites/tesla2.webp";
+import weather1 from "./websites/weather1.webp";
+import weather2 from "./websites/weather2.webp";
 
 const techList = [
   {
@@ -144,7 +146,7 @@ const projectsList = [
     id: 4,
     name: "Tesla Clone",
     description:
-      "Tesla Clone website created using Styled Components. This is a simple page that, using a single component that accepts props, generates sections for each brand model. Sections are animated using React Awesome Reveal, and scrolling the mouse causes the website to jump to the next sections.",
+      "Tesla Clone website designed using Styled Components. This is a simple page that, using a single component that accepts props, generates sections for each brand model. Sections are animated using React Awesome Reveal, and scrolling the mouse causes the website to jump to the next sections.",
     images: [tesla1, tesla2],
     tags: [
       "React",
@@ -155,6 +157,22 @@ const projectsList = [
     ],
     liveLink: "https://tesla-clone-react-ts-rf.netlify.app/",
     codeLink: "https://github.com/Vertori/tsl-cln-react-typescript",
+  },
+  {
+    id: 5,
+    name: "Weather App",
+    description:
+      "Weather app based on fetching data from Weather API. It allows users to search for any city, selecting one from those suggested by a dynamically generated list. The application then displays detailed weather data for the selected location. Fully styled using Tailwind CSS.",
+    images: [weather1, weather2],
+    tags: [
+      "React",
+      "Typescript",
+      "Tailwind CSS",
+      "API (Axios)",
+      "React Router",
+    ],
+    liveLink: "https://weather-app-react-ts-rf.netlify.app/",
+    codeLink: "https://github.com/Vertori/wthr-app-react-typescript.git",
   },
 ];
 

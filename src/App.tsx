@@ -1,9 +1,7 @@
-import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import AnimRoutes from "./components/AnimRoutes";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { motion } from "framer-motion";
+import { BrowserRouter as Router } from "react-router-dom";
 import SideSocials from "./components/SideSocials";
 import ScrollToTop from "./components/ScrollToTop";
 import { ToastContainer } from "react-toastify";

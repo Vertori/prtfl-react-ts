@@ -1,13 +1,9 @@
 import ProjectBox from "../components/ProjectBox";
 import { projectsList } from "../assets";
-import { motion } from "framer-motion";
-import { transition1 } from "../transitions";
 
 const Projects = (): JSX.Element => {
   return (
-    <section
-      className="section"
-    >
+    <section className="section">
       <div className="container mx-auto min-h-full pt-40 px-4 pb-28">
         <div className="pb-6">
           <h1 className="h1 text-center">Some of my projects</h1>
