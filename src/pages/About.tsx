@@ -18,7 +18,7 @@ const About = (): JSX.Element => {
           <h1 className="h1 mb-4 text-center lg:text-start">About Me</h1>
           <p className="text-[20px] text-primary text-center lg:text-start">
             I'm Rafał, a 24 years old ambitious, passionate and self-taught
-            Frontend Developer who spends every single day learning new things
+            Frontend Developer with over 2 years experience in frontend development who spends every single day learning new things
             along with solutions, best practices and developing his programming
             skills. I'm always focusing on creating responsive and user-friendly
             websites. Besides, I am an IT technician and a student of IT in
